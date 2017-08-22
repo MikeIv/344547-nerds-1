@@ -1,138 +1,176 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="utf-8">
-	<title>Nerds-Нёрдс-Каталог</title>
-	<meta name="description" content="дизайн-студия из Краснодара. Веб-сайты, мобильные приложения, презентации">
-	<link href="css/normalize.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <meta charset="utf-8">
+  <title>Nerds-Нёрдс-Каталог</title>
+  <meta name="description" content="дизайн-студия из Краснодара. Веб-сайты, мобильные приложения, презентации">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
-	<body>
-	<header>
-		<a><img src="img/nerdsLogo.png" alt="NerdsLogo" width="160" height="65"> </a>
-		<nav>
-			<ul>
-				<li><a href="#">Студия</a></li>
-				<li><a href="#">Клиенты</a></li>
-				<li><a href="#">Магазин</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">Корзина</a></li>
-			</ul>
-		</nav>
-		<h1>Магазин готовых шаблонов</h1>
-	</header>
 
-		<article>
-			<h2>Шаблоны</h2>
-			<p>Сортировать:</p>
-			<nav>
-				<ul>
-					<li>
-						<a href="#">По цене</a>
-					</li>
-					<li>
-						<a href="#">По типу</a>
-					</li>
-					<li>
-						<a href="#">По названию</a>
-					</li>
-				</ul>
-			</nav>
+<body>
+  <header class="header main-wrapper">
+    <h1 class="visually-hidden">Магазин Нердс</h1>
+    <section class="header-navbar main-wrapper">
+      <a class="main-logo" href="index.html"><img src="img/nerds-logo.svg" alt="Логотип дизайн-студии Нёрдс" width="160" height="65"></a>
+      <nav class="main-navbar">
+        <ul class="header-nav">
+          <li class="nav-item"><a href="index.html">Студия</a></li>
+          <li class="nav-item"><a href="#">Клиенты</a></li>
+          <li class="nav-item active"><a href="#">Магазин</a></li>
+          <li class="nav-item"><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="header-basket">
+          <li class="basket-item">
+            <a class="basket-link" href="#">Корзина</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <div class="catalog-header">
+      <h2>Магазин готовых шаблонов</h2>
+    </div>
+  </header>
 
-			<ul>
-				<li>
-					<a href="#"><img src="img/img-sedona.jpg" alt="site1" width="360" height="576"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/img-pink.jpg" alt="site2" width="360" height="576"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/img-barbershop.jpg" alt="site3" width="360" height="576"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/img-mishka.jpg" alt="site4" width="360" height="576"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/img-aplus.jpg" alt="site5" width="360" height="576"></a>
-				</li>
-				<li>
-					<a href="#"><img src="img/img-kvast.jpg" alt="site6" width="360" height="576"></a>
-				</li>
-			</ul>
-		</article>
-		<section>
-			<a href="#">1</a>
-			<a href="#">2</a>
-			<a href="#">3</a>
-			<a href="#">Следующая</a>
-		</section>
+  <div class="main-catalog main-wrapper">
+    <aside class="catalog-sidebar">
+      <h2 class="visually-hidden">Поиск шаблонов по признакам</h2>
+      <section class="catalog-filter-price">
+        <p class="catalog-filter-header">Стоимость:</p>
+        <form action="form.php" method="GET">
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+            </div>
+          </div>
 
-		<aside>
-				<h2>Поиск шаблонов по признакам</h2>
-				<section>
-					<p>Стоимость:</p>
-					<label>
-						<input type="checkbox" name="range">От 0 до 15000
-					</label>
-				</section>
-				<section>
-					<p>Сетка:</p>
-					<label>
-						<input type="radio" name="range">Адаптивная
-					</label>
-					<label>
-						<input type="radio" name="range">Фиксированная
-					</label>
-					<label>
-						<input type="radio" name="range">Резиновая
-					</label>
-				</section>
-				<section>
-					<p>Особенности:</p>
-					<label>
-						<input type="checkbox" name="range">Слайдер
-					</label>
-					<label>
-						<input type="checkbox" name="range">Блок преимуществ
-					</label>
-					<label>
-						<input type="checkbox" name="range">Новости
-					</label>
-					<label>
-						<input type="checkbox" name="range">Галерея
-					</label>
-					<label>
-						<input type="checkbox" name="range">Корзина
-					</label>
-				</section>
-				<a href="#">Показать</a>
-		</aside>
+          <!-- другие элементы формы -->
 
-		<section>
-			<img src="img/Map.jpg" alt="Map" width="1440" height="416">
-			<h2>NЁRDS DESIGN STUDIO</h2>
-			<p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
-			<p>тел. +7 (812) 275-75-75</p>
-			<a href="#">Напишите нам</a>
-		</section>
+        </form>
+      </section>
+      <section>
+        <p class="catalog-filter-header">Сетка:</p>
+        <div class="catalog-grid-block">
+          <label class="catalog-grid-checkbox">
+            <input type="radio" name="grid" value="a" checked><span class="radio-indicate"></span>Адаптивная
+          </label>
+          <label class="catalog-grid-checkbox">
+            <input type="radio" name="grid" value="b"><span class="radio-indicate"></span>Фиксированная
+          </label>
+          <label class="catalog-grid-checkbox">
+            <input type="radio" name="grid" value="c"><span class="radio-indicate"></span>Резиновая
+          </label>
+        </div>
+      </section>
+      <section>
+        <p class="catalog-filter-header">Особенности:</p>
+        <div class="catalog-properties-block">
+         <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range">Слайдер
+        </label>
+        <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range">Блок преимуществ
+        </label>
+        <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range">Новости
+        </label>
+        <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range">Галерея
+        </label>
+        <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range">Корзина
+        </label>
+        </div>
+      </section>
+      <a href="#">Показать</a>
+    </aside>
 
-	<footer>
-		<p>
-			<a href="#">Вконтакте</a>
-			<a href="#">Фэйсбук</a>
-			<a href="#">Инстаграм</a>
-		</p>
+    <div class="catalog-items">
+      <section class="catalog-items-list">
+        <h2 class="visually-hidden">Шаблоны</h2>
+        <p class="catalog-filter-header">Сортировать:</p>
+        <nav class="catalog-items-header">
+          <ul class="catalog-items-header-list">
+            <li class="catalog-price-list catalog-item">
+              <a href="#">По цене</a>
+            </li>
+            <li class="catalog-type-list catalog-item">
+              <a href="#">По типу</a>
+            </li>
+            <li class="catalog-name-list catalog-item">
+              <a href="#">По названию</a>
+            </li>
+            <li class="catalog-arrow-list catalog-item">
+              <a class="arrow arrow-down" href="#">Сортировка по убыванию</a>
+              <a class="arrow arrow-up" href="#">Сортировка по возрастанию</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
 
-		<p>
-			<b>Давайте дружить, это выгодно!</b>
-			<p>Скидка 10% для друзей из социальных сетей.</p>
-		</p>
-	</footer>
+      <ul class="catalog-product">
+        <li>
+          <a href="#"><img src="img/img-sedona.jpg" alt="site1" width="360" height="576"></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/img-pink.jpg" alt="site2" width="360" height="576"></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/img-barbershop.jpg" alt="site3" width="360" height="576"></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/img-mishka.jpg" alt="site4" width="360" height="576"></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/img-aplus.jpg" alt="site5" width="360" height="576"></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/img-kvast.jpg" alt="site6" width="360" height="576"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <section class="pagination main-wrapper">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">Следующая</a>
+  </section>
 
-	</body>
+  <section class="contacts main-wrapper">
+    <img src="img/Map.jpg" alt="Map" width="1440" height="416">
+    <div class="contact-item">
+      <h2>NЁRDS DESIGN STUDIO</h2>
+      <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
+      <p>тел. +7 (812) 275-75-75</p>
+      <a class="contact-btn" href="#">Напишите нам</a>
+    </div>
+  </section>
+
+  <footer class="footer main-wrapper">
+    <p class="social-block">
+      <a class="vk-btn social-btn" href="#">Вконтакте</a>
+      <a class="fb-btn social-btn" href="#">Фэйсбук</a>
+      <a class="inst-btn social-btn" href="#">Инстаграм</a></p>
+    <div class="footer-item">
+      <b>Давайте дружить, это выгодно!</b>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
+  </footer>
+
+</body>
+
 </html>
