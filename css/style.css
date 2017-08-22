@@ -827,35 +827,82 @@ http://webaim.org/techniques/css/invisiblecontent/ */
   opacity: 0.5;
 }
 
-
 .catalog-grid-checkbox input[type="radio"],
 .catalog-properties-checkbox input[type="checkbox"] {
   display: none;
 }
 
-.catalog-grid-checkbox input[type="radio"] + .radio-indicate {
+.catalog-grid-checkbox input[type="radio"]+.radio-indicate {
   position: absolute;
   top: -5px;
   left: -35px;
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
   border: 4px solid #000;
   border-radius: 20px;
 }
 
-.catalog-grid-checkbox input[type="radio"]:checked + .radio-indicate::before {
+.catalog-grid-checkbox input[type="radio"]:checked+.radio-indicate::before {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 10px;
-  height: 10px;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 10px;
   background-color: #000;
 }
 
-.catalog-grid-checkbox:hover {
+.catalog-grid-checkbox:hover,
+.catalog-properties-checkbox:hover {
   opacity: 0.7;
+}
+
+.catalog-properties-checkbox input[type="checkbox"]+.check-indicate {
+  position: absolute;
+  top: -5px;
+  left: -35px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.catalog-properties-checkbox input[type="checkbox"]:checked+.check-indicate::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+
+.catalog-filter-btn {
+  display: inline-block;
+  min-width: 100px;
+  height: auto;
+  margin-top: 38px;
+  padding: 16px 55px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: #cacaca;
+}
+
+.catalog-filter-btn:hover {
+  background-color: #dfdfdf;
+}
+
+.catalog-filter-btn:active {
+  background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 #bfbfbf;
+  color: #959595;
 }
 
 
@@ -938,11 +985,176 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 .catalog-product {
   display: flex;
   justify-content: space-between;
+  align-content: stretch;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   margin-top: 50px;
   padding: 0;
+}
+
+.product-block {
+  position: relative;
+  min-height: 610px;
+  margin-bottom: 30px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  overflow: hidden;
+}
+
+.product-block:hover {
+  box-shadow: 0 7px 10px #cacaca;
+}
+
+.product-block::before {
+  display: block;
+  content: "";
+  width: 360px;
+  height: 40px;
+  background-image: url("../img/browser-top.png");
+}
+
+.product-block:hover::before {
+  background-image: url("../img/browser-top-hover.png");
+}
+
+.product-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  width: 360px;
+  height: 231px;
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+  background-color: #eeeeee;
+  display: none;
+}
+
+.product-name {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.product-definition {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #666666;
+}
+
+.product-price {
+  margin: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-right: 57px;
+  padding-left: 57px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  border: none;
+  background-color: #fb565a;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.product-price:hover {
+  background-color: #e74246;
+}
+
+.product-price:active {
+  background-color: #d7373b;
+  box-shadow: 0px 4px 0px 0px #c13135 inset;
+}
+
+.product-block:hover .product-info {
+  display: flex;
+}
+
+.pagination {
+  display: block;
+  margin-top: 43px;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-items {
+  margin-right: 10px;
+}
+
+.pagination-item {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 21px;
+  padding-left: 21px;
+  border-radius: 3px;
+  background-color: #eeeeee;
+  color: #000000;
+}
+
+.pagination-item:hover {
+  background-color: #dfdfdf;
+}
+
+.pagination-item:active {
+  color: #acacac;
+  background-color: #d5d5d5;
+  box-shadow: 0px 4px 0px 0px #bfbfbf inset;
+}
+
+.pagination-item-active {
+  
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 18px;
+  padding-left: 18px;
+  border-radius: 3px;
+  border: 3px solid #dbdbdb;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.next-text {
+  padding-right: 78px;
+  padding-left: 78px;
 }
 
 .contacts {

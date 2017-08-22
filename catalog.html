@@ -78,24 +78,24 @@
       <section>
         <p class="catalog-filter-header">Особенности:</p>
         <div class="catalog-properties-block">
-         <label class="catalog-properties-checkbox">
-          <input type="checkbox" name="range">Слайдер
+          <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range" checked><span class="check-indicate"></span>Слайдер
         </label>
-        <label class="catalog-properties-checkbox">
-          <input type="checkbox" name="range">Блок преимуществ
+          <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range"><span class="check-indicate"></span>Блок преимуществ
         </label>
-        <label class="catalog-properties-checkbox">
-          <input type="checkbox" name="range">Новости
+          <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range" checked><span class="check-indicate"></span>Новости
         </label>
-        <label class="catalog-properties-checkbox">
-          <input type="checkbox" name="range">Галерея
+          <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range"><span class="check-indicate"></span>Галерея
         </label>
-        <label class="catalog-properties-checkbox">
-          <input type="checkbox" name="range">Корзина
+          <label class="catalog-properties-checkbox">
+          <input type="checkbox" name="range"><span class="check-indicate"></span>Корзина
         </label>
         </div>
       </section>
-      <a href="#">Показать</a>
+      <a class="catalog-filter-btn" href="#">Показать</a>
     </aside>
 
     <div class="catalog-items">
@@ -122,33 +122,71 @@
       </section>
 
       <ul class="catalog-product">
-        <li>
-          <a href="#"><img src="img/img-sedona.jpg" alt="site1" width="360" height="576"></a>
+        <li class="product-block">
+          <a href="#"><img src="img/img-sedona.jpg" alt="site Sedona" width="360" height="576"></a>
+          <div class="product-info">
+            <a href="#" class="product-name">Sedona</a>
+            <p class="product-definition">Информационный сайт<br>для туристов</p>
+            <button class="product-price">9 900 руб.</button>
+          </div>
         </li>
-        <li>
+        <li class="product-block">
           <a href="#"><img src="img/img-pink.jpg" alt="site2" width="360" height="576"></a>
+          <div class="product-info">
+            <a href="#" class="product-name">Pink App</a>
+            <p class="product-definition">Продуктовый лендинг<br>приложения для iOS и Android</p>
+            <button class="product-price">9 900 руб.</button>
+          </div>
         </li>
-        <li>
+        <li class="product-block">
           <a href="#"><img src="img/img-barbershop.jpg" alt="site3" width="360" height="576"></a>
+          <div class="product-info">
+            <a href="#" class="product-name">Barbershop</a>
+            <p class="product-definition">Сайт салоны красоты.<br>Для мужчин, да.</p>
+            <button class="product-price">9 900 руб.</button>
+          </div>
         </li>
-        <li>
+        <li class="product-block">
           <a href="#"><img src="img/img-mishka.jpg" alt="site4" width="360" height="576"></a>
+          <div class="product-info">
+            <a href="#" class="product-name">MISHKA</a>
+            <p class="product-definition">Интернет-магазин<br>вязаных игрушек</p>
+            <button class="product-price">9 900 руб.</button>
+          </div>
         </li>
-        <li>
+        <li class="product-block">
           <a href="#"><img src="img/img-aplus.jpg" alt="site5" width="360" height="576"></a>
+          <div class="product-info">
+            <a href="#" class="product-name">A Plus</a>
+            <p class="product-definition">Лендинг курсов повышения<br>квалификации</p>
+            <button class="product-price">9 900 руб.</button>
+          </div>
         </li>
-        <li>
+        <li class="product-block">
           <a href="#"><img src="img/img-kvast.jpg" alt="site6" width="360" height="576"></a>
+          <div class="product-info">
+            <a href="#" class="product-name">КВАСТ</a>
+            <p class="product-definition">Промо-сайт производителя<br>крафтового кваса</p>
+            <button class="product-price">9 900 руб.</button>
+          </div>
         </li>
       </ul>
-    </div>
-  </div>
-  <section class="pagination main-wrapper">
-    <a href="#">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-    <a href="#">Следующая</a>
+      <section class="pagination">
+    <ul class="pagination-list">
+      <li class="pagination-items"><a class="pagination-item-active">1</a>
+      </li>
+      <li class="pagination-items"><a class="pagination-item" href="#">2</a>
+      </li>
+      <li class="pagination-items"><a class="pagination-item" href="#">3</a>
+      </li>
+      <li class="pagination-items"><a class="pagination-item next-text" href="#">Следующая</a>
+      </li>
+    </ul>
   </section>
+    </div>
+    
+  </div>
+  
 
   <section class="contacts main-wrapper">
     <img src="img/Map.jpg" alt="Map" width="1440" height="416">
