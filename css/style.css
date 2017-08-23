@@ -112,7 +112,7 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 .nav-item.active a::after {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 28px;
   left: 0;
   right: 0;
   height: 2px;
@@ -153,31 +153,35 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 
 .slider-controls {
   position: absolute;
-  bottom: 105px;
+  bottom: 100px;
   left: 50%;
   width: 200px;
   height: 10px;
-  margin-left: -100px;
+  margin-left: -90px;
   text-align: center;
   z-index: 100;
 }
 
 .slider-controls label {
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0 7px;
-  background: white;
-  border: 5px solid white;
+  width: 4px;
+  height: 4px;
+  margin: 0;
+  margin-right: 23px;
+  padding: 0;
   vertical-align: top;
+  background-color: #fff;
+  border: 2px solid #fff;
   border-radius: 50%;
+  box-shadow: 0 0 0 5px #fff;
   cursor: pointer;
 }
 
-#btn-1:checked~.slider-controls label[for="btn-1"],
-#btn-1:checked~.slider-controls label[for="btn-2"],
-#btn-1:checked~.slider-controls label[for="btn-3"] {
-  background: #c1c1c1;
+
+#btn-1:checked~ .slider-controls label[for="btn-1"],
+#btn-2:checked~ .slider-controls label[for="btn-2"],
+#btn-3:checked~ .slider-controls label[for="btn-3"] {
+  border-color: #c1c1c1;
 }
 
 .slider-block {
@@ -722,6 +726,12 @@ http://webaim.org/techniques/css/invisiblecontent/ */
   margin-right: 140px;
 }
 
+.catalog-grid-filter {
+  margin: 0;
+  margin-top: 55px;
+  padding: 0;
+}
+
 .catalog-filter-header {
   width: 260px;
   margin: 0;
@@ -734,7 +744,7 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 }
 
 .range-filter {
-  width: 240px;
+  width: 260px;
   margin: 50px auto;
   /* для демонстрации */
 }
@@ -779,7 +789,7 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 }
 
 .range-controls .toggle-max {
-  left: 145px;
+  left: 158px;
 }
 
 .price-controls {
@@ -809,9 +819,13 @@ http://webaim.org/techniques/css/invisiblecontent/ */
   background: #f1f1f1;
 }
 
+.catalog-grid-header {
+  margin-top: 50px;
+}
+
 .catalog-grid-block,
 .catalog-properties-block {
-  margin-top: 30px;
+  margin-top: 12px;
 }
 
 .catalog-grid-checkbox,
@@ -819,7 +833,7 @@ http://webaim.org/techniques/css/invisiblecontent/ */
   position: relative;
   display: block;
   margin-left: 35px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 20px;
   color: #000;
@@ -834,10 +848,10 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 
 .catalog-grid-checkbox input[type="radio"]+.radio-indicate {
   position: absolute;
-  top: -5px;
+  top: 0px;
   left: -35px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 4px solid #000;
   border-radius: 20px;
 }
@@ -845,8 +859,8 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 .catalog-grid-checkbox input[type="radio"]:checked+.radio-indicate::before {
   content: "";
   position: absolute;
-  top: 6px;
-  left: 6px;
+  top: 4px;
+  left: 4px;
   width: 8px;
   height: 8px;
   border-radius: 10px;
@@ -856,6 +870,11 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 .catalog-grid-checkbox:hover,
 .catalog-properties-checkbox:hover {
   opacity: 0.7;
+}
+
+.catalog-properties-header {
+  margin-top: 45px;
+  margin-bottom: 20px;
 }
 
 .catalog-properties-checkbox input[type="checkbox"]+.check-indicate {
@@ -881,9 +900,9 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 
 .catalog-filter-btn {
   display: inline-block;
-  min-width: 100px;
+  min-width: 150px;
   height: auto;
-  margin-top: 38px;
+  margin-top: 25px;
   padding: 16px 55px;
   font-size: 16px;
   line-height: 18px;
@@ -1098,6 +1117,8 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 
 .pagination {
   display: block;
+  margin: 0;
+  padding: 0;
   margin-top: 43px;
 }
 
@@ -1320,8 +1341,8 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 /* Форма обратной связи */
 
 .nerds-modal-form {
-  position: absolute;
-  top: 1705px;
+  position: fixed;
+  top: 20%;
   left: 50%;
   width: 960px;
   height: 590px;
@@ -1347,6 +1368,15 @@ http://webaim.org/techniques/css/invisiblecontent/ */
   border: 0;
   cursor: pointer;
   background-image: url("../img/close-cross.svg");
+  opacity: 0.3;
+}
+
+.nerds-modal-form-close:hover {
+  opacity: 1;
+}
+
+.nerds-modal-form-close:active {
+  opacity: 0.1;
 }
 
 .nerds-modal-form-title {
@@ -1382,6 +1412,32 @@ http://webaim.org/techniques/css/invisiblecontent/ */
   border: solid 2px #d7dcde;
   border-radius: 3px;
   box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.nerds-form-content input[type="text"],
+.nerds-form-content input[type="email"] {
+  color: #d7dcde;
+}
+
+.nerds-form-content input[type="text"]:hover,
+.nerds-form-content input[type="email"]:hover {
+  border: solid 2px #b4b9bb;
+  color: #b4b9bb;
+}
+
+.nerds-form-content input[type="text"]:focus,
+.nerds-form-content input[type="email"]:focus {
+  border: solid 2px #000;
+  color: #000;
+}
+
+.nerds-form-content input[type="email"]:invalid {
+  border: solid 2px #e74246;
+  color: #e74246;
 }
 
 .form-name {
