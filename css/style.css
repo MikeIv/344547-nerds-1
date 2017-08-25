@@ -490,7 +490,7 @@ http://webaim.org/techniques/css/invisiblecontent/ */
   left: -35px;
   width: 25px;
   height: 2px;
-  background-image: url(../img/features-list-items-line.svg);
+  background-color: #fb565a;
 }
 
 .features-list2 {
