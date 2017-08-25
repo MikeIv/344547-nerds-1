@@ -1339,8 +1339,35 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 
 
 /* Форма обратной связи */
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
 
 .nerds-modal-form {
+  display: none;
   position: fixed;
   top: 20%;
   left: 50%;
@@ -1369,6 +1396,15 @@ http://webaim.org/techniques/css/invisiblecontent/ */
   cursor: pointer;
   background-image: url("../img/close-cross.svg");
   opacity: 0.3;
+}
+
+.nerds-modal-form-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .nerds-modal-form-close:hover {
