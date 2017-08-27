@@ -194,7 +194,8 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 }
 
 .slider-block-text {
-  width: 560px;
+  width: 400px;
+  min-height: 360px;
   margin: 0;
   margin-top: 68px;
   padding: 0;
@@ -295,7 +296,7 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 .advantages-block {
   position: relative;
   width: 360px;
-  min-height: 350;
+  min-height: 350px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1496,8 +1497,7 @@ http://webaim.org/techniques/css/invisiblecontent/ */
 
 .form-btn {
   width: 260px;
-  height: 50px;
-  ;
+  height: 50px;  ;
   margin: 0 auto;
   margin-top: 5px;
   margin-left: 0px;
