@@ -61,41 +61,43 @@
 
         </form>
       </section>
-      <section class="catalog-grid-filter">
-        <p class="catalog-grid-header catalog-filter-header">Сетка:</p>
-        <div class="catalog-grid-block">
-          <label class="catalog-grid-checkbox">
+      <form action="nerds.ru" method="post">
+        <section class="catalog-grid-filter">
+          <p class="catalog-grid-header catalog-filter-header">Сетка:</p>
+          <div class="catalog-grid-block">
+            <label class="catalog-grid-checkbox">
             <input type="radio" name="grid" value="a" checked><span class="radio-indicate"></span>Адаптивная
           </label>
-          <label class="catalog-grid-checkbox">
+            <label class="catalog-grid-checkbox">
             <input type="radio" name="grid" value="b"><span class="radio-indicate"></span>Фиксированная
           </label>
-          <label class="catalog-grid-checkbox">
+            <label class="catalog-grid-checkbox">
             <input type="radio" name="grid" value="c"><span class="radio-indicate"></span>Резиновая
           </label>
-        </div>
-      </section>
-      <section>
-        <p class="catalog-properties-header catalog-filter-header">Особенности:</p>
-        <div class="catalog-properties-block">
-          <label class="catalog-properties-checkbox">
+          </div>
+        </section>
+        <section>
+          <p class="catalog-properties-header catalog-filter-header">Особенности:</p>
+          <div class="catalog-properties-block">
+            <label class="catalog-properties-checkbox">
           <input type="checkbox" name="range" checked><span class="check-indicate"></span>Слайдер
         </label>
-          <label class="catalog-properties-checkbox">
+            <label class="catalog-properties-checkbox">
           <input type="checkbox" name="range"><span class="check-indicate"></span>Блок преимуществ
         </label>
-          <label class="catalog-properties-checkbox">
+            <label class="catalog-properties-checkbox">
           <input type="checkbox" name="range" checked><span class="check-indicate"></span>Новости
         </label>
-          <label class="catalog-properties-checkbox">
+            <label class="catalog-properties-checkbox">
           <input type="checkbox" name="range"><span class="check-indicate"></span>Галерея
         </label>
-          <label class="catalog-properties-checkbox">
+            <label class="catalog-properties-checkbox">
           <input type="checkbox" name="range"><span class="check-indicate"></span>Корзина
         </label>
-        </div>
-      </section>
-      <a class="catalog-filter-btn" href="#">Показать</a>
+          </div>
+        </section>
+        <button class="catalog-filter-btn" type="submit">Показать</button>
+      </form>
     </aside>
 
     <div class="catalog-items">
@@ -172,21 +174,21 @@
         </li>
       </ul>
       <section class="pagination">
-    <ul class="pagination-list">
-      <li class="pagination-items"><a class="pagination-item-active">1</a>
-      </li>
-      <li class="pagination-items"><a class="pagination-item" href="#">2</a>
-      </li>
-      <li class="pagination-items"><a class="pagination-item" href="#">3</a>
-      </li>
-      <li class="pagination-items"><a class="pagination-item next-text" href="#">Следующая</a>
-      </li>
-    </ul>
-  </section>
+        <ul class="pagination-list">
+          <li class="pagination-items"><a class="pagination-item-active">1</a>
+          </li>
+          <li class="pagination-items"><a class="pagination-item" href="#">2</a>
+          </li>
+          <li class="pagination-items"><a class="pagination-item" href="#">3</a>
+          </li>
+          <li class="pagination-items"><a class="pagination-item next-text" href="#">Следующая</a>
+          </li>
+        </ul>
+      </section>
     </div>
-    
+
   </div>
-  
+
 
   <section class="contacts main-wrapper">
     <iframe class="contacts-map" src="https://yandex.ru/map-widget/v1/-/CBUFqSEBKB" width="1440" height="416" frameborder="0"></iframe>
@@ -208,7 +210,7 @@
       <p>Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
-  
+
   <section class="nerds-modal-form">
     <button class="nerds-modal-form-close" type="button" title="Закрыть">Закрыть</button>
     <h2 class="nerds-modal-form-title">Напишите нам</h2>
@@ -222,12 +224,10 @@
       <button class="form-btn" type="submit">Отправить</button>
     </form>
   </section>
-  
-<<<<<<< HEAD
+
+
   <script src="js/script-min.js"></script>
-=======
-  <script src="js/script.js"></script>
->>>>>>> 954bd6360bbfddb07669b78d40a21f72170f4016
+
 
 </body>
 
